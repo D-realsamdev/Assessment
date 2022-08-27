@@ -118,7 +118,7 @@ class _Stage3ScreenState extends State<Stage3Screen> {
                     ],
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 300,
                   ),
                   ReusableButton(
                     bttext: "Next",
@@ -128,38 +128,5 @@ class _Stage3ScreenState extends State<Stage3Screen> {
             ),
           ),
         ));
-  }
-}
-
-class InputField extends StatelessWidget {
-  const InputField({
-    required this.title,
-  });
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-        ),
-        h15Spacing,
-        TextField(
-          decoration: InputDecoration(
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 1, color: Colors.grey),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 1, color: Colors.grey),
-            ),
-            fillColor: Colors.white,
-            filled: true,
-            border: OutlineInputBorder(),
-          ),
-        ),
-      ],
-    );
   }
 }

@@ -105,6 +105,26 @@ class _Stage2ScreenState extends State<Stage2Screen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          "How do you want to save?",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        Row(
+                          children: [
+                            ReusableCard(),
+                            w15Spacing,
+                            ReusableCard(),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  h20Spacing,
+                  Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
                           "What is your saving frequency?",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 15),
@@ -169,7 +189,7 @@ class _Stage2ScreenState extends State<Stage2Screen> {
                     ],
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 150,
                   ),
                   ReusableButton(
                     bttext: "Next",

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ReusableButton extends StatelessWidget {
   const ReusableButton({required this.bttext});
   final String bttext;
+
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -104,6 +105,35 @@ class InputField extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class ReusableCard extends StatelessWidget {
+  const ReusableCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(
+          color: Colors.grey,
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(6)),
+      ),
+      child: const SizedBox(
+        width: 150,
+        height: 100,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Automatic I will like to be debited automatically'),
+          ),
+        ),
+      ),
     );
   }
 }
